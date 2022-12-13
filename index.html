@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Psychology</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+    <div class="header__body container">
+        <div class="header__row">
+            <a href="index.html" class="header__logo logo">
+                psych<span>o</span>l<span>o</span>gy
+            </a>
+            <div class='header__menu menu'>
+                <div class='menu__icon'>
+                    <span></span>
+                </div>
+                <nav class='menu__body'>
+                    <ul data-spollers='768,max' class='menu__list'>
+                        <li class="menu__item active"><a data-goto='.about' href='index.html' class='menu__link'>Главная</a></li>
+                        <li class="menu__item">
+                            <a data-goto='.project-slider' href='/#projects' class='menu__link'>Проекты</a>
+                            <div data-spoller tabindex='-1' class="menu__arrow icon-arrowSubList"></div>
+                            <ul class="menu__sub-list">
+                                <li><a href="" class="menu__sub-link">Проект 1</a></li>
+                                <li><a href="" class="menu__sub-link">Проект 2</a></li>
+                                <li><a href="" class="menu__sub-link">Проект 3</a></li>
+                                <li><a href="" class="menu__sub-link">Проект 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu__item">
+                            <a data-goto='.articles' href='/#articles' class='menu__link'>Статьи</a>
+                            <div data-spoller tabindex='-1' class="menu__arrow icon-arrowSubList"></div>
+                            <ul class="menu__sub-list">
+                                <li><a href="article.html" class="menu__sub-link">Статья 1</a></li>
+                                <li><a href="" class="menu__sub-link">Статья 2</a></li>
+                                <li><a href="" class="menu__sub-link">Статья 3</a></li>
+                                <li><a href="" class="menu__sub-link">Статья 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu__item"><a data-goto='.gallery' href='/#gallery' class='menu__link'>Галерея</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__phone phone">
+                <div class="phone__link icon-phone">Связаться</div>
+                <div class="phone__popup popup-phone">
+                    <div class="popup-phone__body">
+                        <div class="popup-phone__title">8-(966)-731-0774</div>
+                        <div class="popup-phone__text">Вы можете позвонить Ксении, для того чтобы задать интересующие вас вопросы</div>
+                        <a href="tel: 89667310774" class="popup-phone__btn">Позвонить</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="main">
+            <section class="about">
+                <div class='about__container container'>
+                    <div class="about__body">
+                        <div class="about__col">
+                            <h1 class="about__title title">Немного о нашем сайте
+                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect width="34" height="34" fill="url(#pattern0)" />
+                                    <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1"
+                                            height="1">
+                                            <use xlink:href="#image0_79_109" transform="scale(0.00195312)" />
+                                        </pattern>
+                                        <image id="image0_79_109" width="512" height="512"
+                                            xlink:href="data:image/png;base64,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" />
+                                    </defs>
+                                </svg>
+                            </h1>
+                            <div class="about__text text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, <span>consectetur</span> adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud exercitation
+                                </p>
+                                <p>
+                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                    <span>Excepteur</span> sint occaecat cupidatat non <span>proident</span>, sunt in
+                                    culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                                <p>
+                                    Sed ut perspiciatis unde omnis iste natus sit<span>error</span> voluptatem
+                                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                                    inventore
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about__col">
+                            <div class="about__col_two">
+                                <div class="about__title-list">Как может пригодится наш сайт?</div>
+                                <ul class="about__list">
+                                    <li class="about__item">Sed ut perspiciatis unde omnis iste natus</li>
+                                    <li class="about__item">qui dolorem ipsum quia dolor sit amet</li>
+                                    <li class="about__item">avoids a pain that produces no resultant pleasure aut
+                                        perferendis doloribus asperiores repellat aut perferendis doloribus asperiores
+                                        repellat</li>
+                                    <li class="about__item">aut perferendis doloribus asperiores repellat</li>
+                                    <li class="about__item">Sed ut perspiciatis unde omnis iste natus</li>
+                                    <li class="about__item">qui dolorem ipsum quia dolor sit amet</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="project-slider" id="projects">
+                <div class='project-slider__container container'>
+                    <h2 class="project-slider__title title">Проекты</h2>
+                    <div class="project-slider__body">
+                        <div class="project-slider__wrapper">
+                            <div class="project-slider__slide slide-project">
+                                <picture>
+                                    <source srcset='img/sliderProject/01.webp' type='image/webp'>
+                                    <img src='img/sliderProject/01.jpg' alt='profect image'>
+                                </picture>
+                                <div class="slide-project__content">
+                                    <div class="slide-project__top">
+                                        <h4 class="slide-project__title">ДЕПРЕССИЯ У ДЕТЕЙ</h4>
+                                        <div class="slide-project__labels">
+                                            <div class="slide-project__label slide-project__label_yellow">ЭМОЦИИ</div>
+                                            <div class="slide-project__label slide-project__label_violet">ДЕТИ</div>
+                                        </div>
+                                    </div>
+                                    <div class="slide-project__text">
+                                        <p>
+                                            Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
+                                            несколько абзацев более менее осмысленного текста рыбы на русском языке, а
+                                            начинающему оратору отточить навык публичных выступлений в домашних
+                                            условиях.
+                                        </p>
+                                    </div>
+                                    <a href="" class="slide-project__button">Перейти</a>
+                                </div>
+                            </div>
+                            <div class="project-slider__slide slide-project">
+                                <picture>
+                                    <source srcset='img/sliderProject/01.webp' type='image/webp'>
+                                    <img src='img/sliderProject/01.jpg' alt='profect image'>
+                                </picture>
+                                <div class="slide-project__content">
+                                    <div class="slide-project__top">
+                                        <h4 class="slide-project__title">ДЕПРЕССИЯ У ДЕТЕЙ</h4>
+                                        <div class="slide-project__labels">
+                                            <div class="slide-project__label slide-project__label_yellow">ЭМОЦИИ</div>
+                                            <div class="slide-project__label slide-project__label_violet">ДЕТИ</div>
+                                        </div>
+                                    </div>
+                                    <div class="slide-project__text">
+                                        <p>
+                                            Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
+                                            несколько абзацев более менее осмысленного текста рыбы на русском языке, а
+                                            начинающему оратору отточить навык публичных выступлений в домашних
+                                            условиях.
+                                        </p>
+                                    </div>
+                                    <a href="" class="slide-project__button">Перейти</a>
+                                </div>
+                            </div>
+                            <div class="project-slider__slide slide-project">
+                                <picture>
+                                    <source srcset='img/sliderProject/01.webp' type='image/webp'>
+                                    <img src='img/sliderProject/01.jpg' alt='profect image'>
+                                </picture>
+                                <div class="slide-project__content">
+                                    <div class="slide-project__top">
+                                        <h4 class="slide-project__title">ДЕПРЕССИЯ У ДЕТЕЙ</h4>
+                                        <div class="slide-project__labels">
+                                            <div class="slide-project__label slide-project__label_yellow">ЭМОЦИИ</div>
+                                            <div class="slide-project__label slide-project__label_violet">ДЕТИ</div>
+                                        </div>
+                                    </div>
+                                    <div class="slide-project__text">
+                                        <p>
+                                            Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
+                                            несколько абзацев более менее осмысленного текста рыбы на русском языке, а
+                                            начинающему оратору отточить навык публичных выступлений в домашних
+                                            условиях.
+                                        </p>
+                                    </div>
+                                    <a href="" class="slide-project__button">Перейти</a>
+                                </div>
+                            </div>
+                            <div class="project-slider__slide slide-project">
+                                <picture>
+                                    <source srcset='img/sliderProject/01.webp' type='image/webp'>
+                                    <img src='img/sliderProject/01.jpg' alt='profect image'>
+                                </picture>
+                                <div class="slide-project__content">
+                                    <div class="slide-project__top">
+                                        <h4 class="slide-project__title">ДЕПРЕССИЯ У ДЕТЕЙ</h4>
+                                        <div class="slide-project__labels">
+                                            <div class="slide-project__label slide-project__label_yellow">ЭМОЦИИ</div>
+                                            <div class="slide-project__label slide-project__label_violet">ДЕТИ</div>
+                                        </div>
+                                    </div>
+                                    <div class="slide-project__text">
+                                        <p>
+                                            Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
+                                            несколько абзацев более менее осмысленного текста рыбы на русском языке, а
+                                            начинающему оратору отточить навык публичных выступлений в домашних
+                                            условиях.
+                                        </p>
+                                    </div>
+                                    <a href="" class="slide-project__button">Перейти</a>
+                                </div>
+                            </div>
+                            <div class="project-slider__slide slide-project">
+                                <picture>
+                                    <source srcset='img/sliderProject/01.webp' type='image/webp'>
+                                    <img src='img/sliderProject/01.jpg' alt='profect image'>
+                                </picture>
+                                <div class="slide-project__content">
+                                    <div class="slide-project__top">
+                                        <h4 class="slide-project__title">ДЕПРЕССИЯ У ДЕТЕЙ</h4>
+                                        <div class="slide-project__labels">
+                                            <div class="slide-project__label slide-project__label_yellow">ЭМОЦИИ</div>
+                                            <div class="slide-project__label slide-project__label_violet">ДЕТИ</div>
+                                        </div>
+                                    </div>
+                                    <div class="slide-project__text">
+                                        <p>
+                                            Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
+                                            несколько абзацев более менее осмысленного текста рыбы на русском языке, а
+                                            начинающему оратору отточить навык публичных выступлений в домашних
+                                            условиях.
+                                        </p>
+                                    </div>
+                                    <a href="" class="slide-project__button">Перейти</a>
+                                </div>
+                            </div>
+                            <div class="project-slider__slide slide-project">
+                                <picture>
+                                    <source srcset='img/sliderProject/01.webp' type='image/webp'>
+                                    <img src='img/sliderProject/01.jpg' alt='profect image'>
+                                </picture>
+                                <div class="slide-project__content">
+                                    <div class="slide-project__top">
+                                        <h4 class="slide-project__title">ДЕПРЕССИЯ У ДЕТЕЙ</h4>
+                                        <div class="slide-project__labels">
+                                            <div class="slide-project__label slide-project__label_yellow">ЭМОЦИИ</div>
+                                            <div class="slide-project__label slide-project__label_violet">ДЕТИ</div>
+                                        </div>
+                                    </div>
+                                    <div class="slide-project__text">
+                                        <p>
+                                            Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
+                                            несколько абзацев более менее осмысленного текста рыбы на русском языке, а
+                                            начинающему оратору отточить навык публичных выступлений в домашних
+                                            условиях.
+                                        </p>
+                                    </div>
+                                    <a href="" class="slide-project__button">Перейти</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-slider__dotts dotts-slider"></div>
+                        <div class="project-slider__arrows">
+                            <div
+                                class="project-slider__arrow project-slider__arrow_prev icon-arrowSlider slider-arrow slider-arrow_prev">
+                            </div>
+                            <div
+                                class="project-slider__arrow project-slider__arrow_next icon-arrowSlider slider-arrow slider-arrow_next">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="articles" id="articles">
+                <div class='articles__container container'>
+                    <h2 class="articles__title title">Популярные статьи</h2>
+                    <a href="article.html" class="articles__item">
+                        <div class="articles__item-body">
+                            <div class="articles__image">
+                                <picture>
+                                    <source srcset='img/articles/01.webp' type='image/webp'>
+                                    <img src='img/articles/01.jpg' alt=''>
+                                </picture>
+                            </div>
+                            <div class="articles__content">
+                                <h4 class="articles__title-article">Заголовок</h4>
+                                <div class="articles__labels">
+                                    <div class="articles__label articles__label-year articles__label-year_blue">2020
+                                    </div>
+                                    <div class="articles__label articles__label_catygory">Dashboard</div>
+                                </div>
+                                <div class="articles__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Repellat fugiat esse laboriosam excepturi, natus ipsam, quibusdam mollitia commodi
+                                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                                    inventore </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="articles__item">
+                        <div class="articles__item-body">
+                            <div class="articles__image">
+                                <picture>
+                                    <source srcset='img/articles/02.webp' type='image/webp'>
+                                    <img src='img/articles/02.jpg' alt=''>
+                                </picture>
+                            </div>
+                            <div class="articles__content">
+                                <h4 class="articles__title-article">Заголовок</h4>
+                                <div class="articles__labels">
+                                    <div class="articles__label articles__label-year articles__label-year_green">2020
+                                    </div>
+                                    <div class="articles__label articles__label_catygory">Dashboard</div>
+                                </div>
+                                <div class="articles__text">Lorem ipsum <span>dolor</span> sit amet consectetur
+                                    adipisicing elit. Repellat fugiat esse laboriosam excepturi, natus ipsam, quibusdam
+                                    mollitia commodi </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="articles__item">
+                        <div class="articles__item-body">
+                            <div href="" class="articles__image">
+                                <picture>
+                                    <source srcset='img/articles/03.webp' type='image/webp'>
+                                    <img src='img/articles/03.jpg' alt=''>
+                                </picture>
+                            </div>
+                            <div class="articles__content">
+                                <h4 class="articles__title-article">Заголовок</h4>
+                                <div class="articles__labels">
+                                    <div class="articles__label articles__label-year articles__label-year_red">2020
+                                    </div>
+                                    <div class="articles__label articles__label_catygory">Dashboard</div>
+                                </div>
+                                <div class="articles__text">Lorem ipsum dolor sit amet consectetur
+                                    <span>adipisicing</span> elit. Repellat fugiat esse laboriosam excepturi, natus
+                                    ipsam, quibusdam mollitia commodi </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="gallery" id="gallery">
+                <div class="gallery__wrapper">
+                    <h3 class="gallery__title title">Галерея</h3>
+                    <div class="gallery__body">
+                        <a data-fslightbox='gallery' href="img/gallery/01.webp" class="gallery__item gallery__item_row">
+                            <picture>
+                                <source srcset='img/gallery/01.webp' type='image/webp'>
+                                <img src='img/gallery/01.jpg' alt='gallery photo'>
+                            </picture>
+                        </a>
+                        <a data-fslightbox='gallery' href="img/gallery/01.webp" class="gallery__item">
+                            <picture>
+                                <source srcset='img/gallery/01.webp' type='image/webp'>
+                                <img src='img/gallery/01.jpg' alt='gallery photo'>
+                            </picture>
+                        </a>
+                        <a data-fslightbox='gallery' href="img/gallery/01.webp" class="gallery__item">
+                            <picture>
+                                <source srcset='img/gallery/01.webp' type='image/webp'>
+                                <img src='img/gallery/01.jpg' alt='gallery photo'>
+                            </picture>
+                        </a>
+                        <a data-fslightbox='gallery' href="img/gallery/01.webp" class="gallery__item">
+                            <picture>
+                                <source srcset='img/gallery/01.webp' type='image/webp'>
+                                <img src='img/gallery/01.jpg' alt='gallery photo'>
+                            </picture>
+                        </a>
+                        <a data-fslightbox='gallery' href="img/gallery/01.webp" class="gallery__item">
+                            <picture>
+                                <source srcset='img/gallery/01.webp' type='image/webp'>
+                                <img src='img/gallery/01.jpg' alt='gallery photo'>
+                            </picture>
+                        </a>
+                        <a data-fslightbox='gallery' href="img/gallery/01.webp" class="gallery__item ">
+                            <picture>
+                                <source srcset='img/gallery/01.webp' type='image/webp'>
+                                <img src='img/gallery/01.jpg' alt='gallery photo'>
+                            </picture>
+                        </a>
+                        <a data-fslightbox='gallery' href="img/gallery/01.webp" class="gallery__item gallery__item_row">
+                            <picture>
+                                <source srcset='img/gallery/01.webp' type='image/webp'>
+                                <img src='img/gallery/01.jpg' alt='gallery photo'>
+                            </picture>
+                        </a>
+                        <a data-fslightbox='gallery' href="img/gallery/01.webp" class="gallery__item gallery__item_row gallery__item_col">
+                            <picture>
+                                <source srcset='img/gallery/01.webp' type='image/webp'>
+                                <img src='img/gallery/01.jpg' alt='gallery photo'>
+                            </picture>
+                        </a>
+                        <a data-fslightbox='gallery' href="img/gallery/01.webp" class="gallery__item">
+                            <picture>
+                                <source srcset='img/gallery/01.webp' type='image/webp'>
+                                <img src='img/gallery/01.jpg' alt='gallery photo'>
+                            </picture>
+                        </a>
+                        <a data-fslightbox='gallery' href="img/gallery/01.webp" class="gallery__item">
+                            <picture>
+                                <source srcset='img/gallery/01.webp' type='image/webp'>
+                                <img src='img/gallery/01.jpg' alt='gallery photo'>
+                            </picture>
+                        </a>
+                        <a data-fslightbox='gallery' href="img/gallery/01.webp" class="gallery__item ">
+                            <picture>
+                                <source srcset='img/gallery/01.webp' type='image/webp'>
+                                <img src='img/gallery/01.jpg' alt='gallery photo'>
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="footer">
+    <div class="footer__social social-footer">
+        <div class='container'>
+            <div class="social-footer__body">
+                <div class="social-footer__text">Мы есть в социальных сетях</div>
+                <ul class="social-footer__list">
+                    <li><a href="" class="social-footer__link icon-watsApp"></a></li>
+                    <li><a href="" class="social-footer__link icon-vk"></a></li>
+                    <li><a href="" class="social-footer__link icon-telegram"></a></li>
+                    <li><a href="" class="social-footer__link icon-inst"></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer__main">
+        <div class='container'>
+            <div class="footer__main_body">
+                <div class="footer__about">
+                    <div class="footer__title">О сайте</div>
+                    <div class="footer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat fugiat esse
+                        laboriosam excepturi, natus ipsam, quibusdam mollitia commodi </div>
+                </div>
+                <nav class="footer__menu menu-footer" data-spollers="767.98,max">
+                    <div class="menu-footer__column">
+                        <div class="footer__title icon-arrowSubList" data-spoller>проекты</div>
+                        <ul class="menu-footer__list">
+                            <li><a href="" class="menu-footer__link">Проект какой-то</a></li>
+                            <li><a href="" class="menu-footer__link">Другой элемент мент</a></li>
+                            <li><a href="" class="menu-footer__link">Проект какой-то</a></li>
+                            <li><a href="" class="menu-footer__link">Другой элемент мент</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-footer__column">
+                        <div class="footer__title icon-arrowSubList" data-spoller>Статьи</div>
+                        <ul class="menu-footer__list">
+                            <li><a href="" class="menu-footer__link">Проект какой-то такой  то</a></li>
+                            <li><a href="" class="menu-footer__link">Еще какой-то</a></li>
+                            <li><a href="" class="menu-footer__link">Проект какой-то</a></li>
+                            <li><a href="" class="menu-footer__link">Элемент</a></li>
+                            <li><a href="" class="menu-footer__link">Элемент</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-footer__column">
+                        <div class="footer__title icon-arrowSubList" data-spoller>Контакты</div>
+                        <ul class="menu-footer__list">
+                            <li><a href="" class="menu-footer__link">Тут телефон 1</a></li>
+                            <li><a href="" class="menu-footer__link">Проект какой-то</a></li>
+                            <li><a href="" class="menu-footer__link">Проект какой-то</a></li>
+                            <li><a href="" class="menu-footer__link">Тут почта</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom bottom-footer">
+        <div class='container'>
+            <div class="bottom-footer__body">
+                <div class="bottom-footer__text"><span>&reg; Copy Rights </span><a href="index.html">Psysology.web</a></div>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+    <!--
+    npm install webp-converter@2.2.3 --save-dev
+    -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
