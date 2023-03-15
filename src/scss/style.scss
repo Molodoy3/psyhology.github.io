@@ -88,7 +88,56 @@ $md4: 479.98px;
 /*==================================*/
 
 /*Общие параметры*/
-
+html{
+    &.light{
+        .header__icon-theme_dark{
+            display: block;
+        }
+    }
+    &.dark{
+        .header__icon-theme_light{
+            display: block !important;
+        }
+        body{
+            background-color: #0F232F;
+        }
+        body, .title, .articles__title-article, .articles__text, .about__title-list, .articles-sidebar__title, .sidebar__title, .spoller-article__title, .authors-sidebar__name{
+            color: #fff;
+        }
+        .spoller-article__title{
+            @media (any-hover: hover) {
+                transition: background-color 0.3s ease 0s;
+                &:hover{
+                    background-color: #294758;
+                }
+            }
+        }
+        .article__labels::after{
+            background-color: #acacac;
+            opacity: 0.3;
+        }
+        .bred-crumbs__list li, .article__label, .articles-sidebar__text{
+            color: #b3b3b3;
+        }
+        .spoller-article{
+            background-color: #223C4B;
+        }
+        .about__col:last-child::after{
+            color: #112735;
+            text-shadow: 0px 4px 30px #11273588;
+        }
+        .about__col:last-child{
+            @media (any-hover: hover) {
+                &:hover{
+                    &::after{
+                        color: #122b3a;
+                        text-shadow: 0px 4px 30px #142f419a;
+                    }
+                }
+            }
+        }
+    }
+}
 .wrapper {
     min-height: 100%;
     width: 100%;
@@ -103,7 +152,11 @@ $md4: 479.98px;
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+    opacity: 0;
+    transition: background-color 0.3s ease 0s, color 0.3s ease 0s, opacity 0.8s ease-in-out 0s;
+    &.load{
+        opacity: 1;
+    }
     &.lock{
         overflow: hidden;
     }
@@ -200,6 +253,7 @@ body {
         @include adaptiv-value("margin-bottom", 21, 15, 1);
         display: inline-flex;
         align-items: center;
+        column-gap: 8px;
         svg {
             @include adaptiv-value("height", 34, 28, 1);
         }
@@ -1068,43 +1122,6 @@ body {
 @import "footer";
 
 
-@media (prefers-color-scheme: dark){
-    body{
-        background-color: #0F232F;
-    }
-    body, .title, .articles__title-article, .articles__text, .about__title-list, .articles-sidebar__title, .sidebar__title, .spoller-article__title, .authors-sidebar__name{
-        color: #fff;
-    }
-    .spoller-article__title{
-        @media (any-hover: hover) {
-            transition: background-color 0.3s ease 0s;
-            &:hover{
-                background-color: #294758;
-            }
-        }
-    }
-    .article__labels::after{
-        background-color: #acacac;
-        opacity: 0.3;
-    }
-    .bred-crumbs__list li, .article__label, .articles-sidebar__text{
-        color: #b3b3b3;
-    }
-    .spoller-article{
-        background-color: #223C4B;
-    }
-    .about__col:last-child::after{
-        color: #112735;
-        text-shadow: 0px 4px 30px #11273588;
-    }
-    .about__col:last-child{
-        @media (any-hover: hover) {
-            &:hover{
-                &::after{
-                    color: #122b3a;
-                    text-shadow: 0px 4px 30px #142f419a;
-                }
-            }
-        }
-    }
-}
+/* @media (prefers-color-scheme: dark){
+
+} */

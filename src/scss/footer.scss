@@ -8,9 +8,8 @@
 
     &__main {
         background: #142d3b;
-        padding: 46px 0;
-        @include adaptiv-value('padding-top', 46, 15, 1);
-        @include adaptiv-value('padding-bottom', 46, 15, 1);
+        @include adaptiv-value('padding-top', 55, 35, 1);
+        @include adaptiv-value('padding-bottom', 55, 35, 1);
         &_body {
             display: flex;
             @media (max-width: $md2){
@@ -148,7 +147,7 @@
         @media (max-width: $md3){
             flex: 0 1 100%;
             &:not(:last-child) {
-                margin: 0px 0px 15px 0px;
+                margin: 0px 0px 25px 0px;
             }
         }
     }

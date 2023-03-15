@@ -5,11 +5,62 @@ import './modules/lightgallery.min.js';
 
 window.addEventListener('load', windowLoad);
 function windowLoad() {
+    document.body.classList.add('load');
+
+    const html = document.documentElement;
+    const saveUserTheme = localStorage.getItem('user-theme');
+    let userTheme;
+    if(window.matchMedia){
+        userTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        !saveUserTheme ? changeTheme() : null;
+    });
+    const themeButton = document.querySelector('.theme');
+    const resetButton = document.querySelector('.reset-theme');
+    function setThemeClass() {
+        if (saveUserTheme) {
+            html.classList.add(saveUserTheme);
+            if (resetButton) {
+                resetButton.classList.add('active');
+            }
+        } else{
+            html.classList.add(userTheme);
+        }
+    }
+    setThemeClass()
+    function changeTheme(saveTheme = false) {
+        let currentTheme = html.classList.contains('light') ? 'light' : 'dark';
+        let newTheme;
+
+        if (currentTheme === 'light') {
+            newTheme = 'dark';
+        } else if(currentTheme === 'dark') {
+            newTheme = 'light';
+        }
+        html.classList.remove(currentTheme);
+        html.classList.add(newTheme);
+        saveTheme ? localStorage.setItem('user-theme', newTheme) : null;
+    }
+
+
+
+
     initSpollers();
 
     document.addEventListener("click", documentActions);
     function documentActions(e) {
         const targetElement = e.target;
+
+        if (targetElement.closest('.theme')){
+            themeButton.classList.add('active');
+            changeTheme(true);
+        }
+        if (targetElement.closest('.reset-theme')){
+            resetButton.classList.remove('active');
+            localStorage.setItem('user-theme', '');
+        }
+
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i
             .test(navigator.userAgent) && window.innerWidth > 767.98) {
             if (targetElement.classList.contains('menu__arrow')) {
