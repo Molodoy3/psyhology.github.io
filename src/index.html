@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -72,7 +71,253 @@
                     </div>
                 </div>
             </section>
-            <section class="project-slider" id="projects">
+            <section class="projects">
+                <div class='projects__container container'>
+                    <h2 class="projects__title title">Проекты</h2>
+                    <div class="projects__items">
+                        <a href="" class="projects__item item-projects">
+                            <div class="item-projects__image">
+                                <div class="item-projects__labels">
+                                    <div class="item-projects__label">Радостное</div>
+                                    <div class="item-projects__label">2018</div>
+                                </div>
+                                <picture>
+                                    <source srcset='img/articles/01.webp' type='image/webp'>
+                                    <img src='img/articles/01.jpg' alt=''>
+                                </picture>
+                            </div>
+                            <h4 class="item-projects__title">Какой-то классный проект</h4>
+                        </a>
+                        <a href="" class="projects__item item-projects">
+                            <div class="item-projects__image">
+                                <div class="item-projects__labels">
+                                    <div class="item-projects__label">Грустное</div>
+                                    <div class="item-projects__label">2015</div>
+                                    <div class="item-projects__label">Растройство</div>
+                                </div>
+                                <picture>
+                                    <source srcset='img/articles/02.webp' type='image/webp'>
+                                    <img src='img/articles/02.jpg' alt=''>
+                                </picture>
+                            </div>
+                            <h4 class="item-projects__title">Какой-то классный проект</h4>
+                        </a>
+                        <a href="" class="projects__item item-projects">
+                            <div class="item-projects__image">
+                                <div class="item-projects__labels">
+                                    <div class="item-projects__label">2022</div>
+                                    <div class="item-projects__label">Самый долгий проект</div>
+                                </div>
+                                <picture>
+                                    <source srcset='img/articles/03.webp' type='image/webp'>
+                                    <img src='img/articles/03.jpg' alt=''>
+                                </picture>
+                            </div>
+                            <h4 class="item-projects__title">Какой-то классный проект</h4>
+                        </a>
+                        <a href="" class="projects__item item-projects">
+                            <div class="item-projects__image">
+                                <div class="item-projects__labels">
+                                    <div class="item-projects__label">2012</div>
+                                </div>
+                                <picture>
+                                    <source srcset='img/articles/01.webp' type='image/webp'>
+                                    <img src='img/articles/01.jpg' alt=''>
+                                </picture>
+                            </div>
+                            <h4 class="item-projects__title">Какой-то классный проект</h4>
+                        </a>
+                        <a href="" class="projects__item item-projects">
+                            <div class="item-projects__image">
+                                <div class="item-projects__labels">
+                                    <div class="item-projects__label">2002</div>
+                                    <div class="item-projects__label">Первый проект</div>
+                                </div>
+                                <picture>
+                                    <source srcset='img/articles/02.webp' type='image/webp'>
+                                    <img src='img/articles/02.jpg' alt=''>
+                                </picture>
+                            </div>
+                            <h4 class="item-projects__title">Какой-то классный проект</h4>
+                        </a>
+                        <a href="" class="projects__item item-projects">
+                            <div class="item-projects__image">
+                                <div class="item-projects__labels">
+                                    <div class="item-projects__label">2002</div>
+                                    <div class="item-projects__label">Первый проект</div>
+                                </div>
+                                <picture>
+                                    <source srcset='img/articles/03.webp' type='image/webp'>
+                                    <img src='img/articles/03.jpg' alt=''>
+                                </picture>
+                            </div>
+                            <h4 class="item-projects__title">Какой-то классный проект</h4>
+                        </a>
+                        <a href="" class="projects__item item-projects">
+                            <div class="item-projects__image">
+                                <div class="item-projects__labels">
+                                    <div class="item-projects__label">2002</div>
+                                    <div class="item-projects__label">Первый проект</div>
+                                </div>
+                                <picture>
+                                    <source srcset='img/articles/01.webp' type='image/webp'>
+                                    <img src='img/articles/01.jpg' alt=''>
+                                </picture>
+                            </div>
+                            <h4 class="item-projects__title">Какой-то классный проект</h4>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section data-tabs class="articles">
+                <div class='articles__container container'>
+                    <h2 class="articles__title title">Статьи</h2>
+                    <div class="articles__filter filter-articles">
+                        <button data-filter="*" type="button" class="filter-articles__item active">Все</button>
+                        <button data-filter="neuropsychology" type="button" class="filter-articles__item">Нейропсихология</button>
+                        <button data-filter="artpsychology" type="button" class="filter-articles__item">Артпсихология</button>
+                        <button data-filter="some" type="button" class="filter-articles__item">Еще какой-то филтр</button>
+                    </div>
+                    <div class="articles__items">
+                        <article data-filter-item="neuropsychology" class="articles__article article-articles">
+                            <a href="" class="article-articles__image">
+                                <picture>
+                                    <source srcset='@img/articles/01.webp' type='image/webp'>
+                                    <img src='@img/articles/01.jpg' alt='article'>
+                                </picture>
+                            </a>
+                            <div class="article-articles__info">
+                                <div class="article-articles__date">12.03.2023</div>
+                                <h4 class="article-articles__title">
+                                    <a href="">Название статьи</a>
+                                </h4>
+                                <div class="article-articles__text">Небольшое описание сатьи</div>
+                            </div>
+                        </article>
+                        <article data-filter-item="neuropsychology" class="articles__article article-articles">
+                            <a href="" class="article-articles__image">
+                                <picture>
+                                    <source srcset='@img/articles/02.webp' type='image/webp'>
+                                    <img src='@img/articles/02.jpg' alt='article'>
+                                </picture>
+                            </a>
+                            <div class="article-articles__info">
+                                <div class="article-articles__date">12.03.2023</div>
+                                <h4 class="article-articles__title">
+                                    <a href="">Название статьи</a>
+                                </h4>
+                                <div class="article-articles__text">Небольшое описание сатьи</div>
+                            </div>
+                        </article>
+                        <article data-filter-item="neuropsychology" class="articles__article article-articles">
+                            <a href="" class="article-articles__image">
+                                <picture>
+                                    <source srcset='@img/articles/06.webp' type='image/webp'>
+                                    <img src='@img/articles/06.jfif' alt='article'>
+                                </picture>
+                            </a>
+                            <div class="article-articles__info">
+                                <div class="article-articles__date">12.03.2023</div>
+                                <h4 class="article-articles__title">
+                                    <a href="">Название статьи</a>
+                                </h4>
+                                <div class="article-articles__text">Небольшое описание сатьи</div>
+                            </div>
+                        </article>
+                        <article data-filter-item="artpsychology" class="articles__article article-articles">
+                            <a href="" class="article-articles__image">
+                                <picture>
+                                    <source srcset='@img/articles/07.webp' type='image/webp'>
+                                    <img src='@img/articles/07.png' alt='article'>
+                                </picture>
+                            </a>
+                            <div class="article-articles__info">
+                                <div class="article-articles__date">12.03.2023</div>
+                                <h4 class="article-articles__title">
+                                    <a href="">Название статьи</a>
+                                </h4>
+                                <div class="article-articles__text">Небольшое описание сатьи</div>
+                            </div>
+                        </article>
+                        <article data-filter-item="artpsychology" class="articles__article article-articles">
+                            <a href="" class="article-articles__image">
+                                <picture>
+                                    <source srcset='@img/articles/01.webp' type='image/webp'>
+                                    <img src='@img/articles/01.jpg' alt='article'>
+                                </picture>
+                            </a>
+                            <div class="article-articles__info">
+                                <div class="article-articles__date">12.03.2023</div>
+                                <h4 class="article-articles__title">
+                                    <a href="">Название статьи</a>
+                                </h4>
+                                <div class="article-articles__text">Небольшое описание сатьи</div>
+                            </div>
+                        </article>
+                        <article data-filter-item="some" class="articles__article article-articles">
+                            <a href="" class="article-articles__image">
+                                <picture>
+                                    <source srcset='@img/articles/06.webp' type='image/webp'>
+                                    <img src='@img/articles/06.png' alt='article'>
+                                </picture>
+                            </a>
+                            <div class="article-articles__info">
+                                <div class="article-articles__date">12.03.2023</div>
+                                <h4 class="article-articles__title">
+                                    <a href="">Название статьи</a>
+                                </h4>
+                                <div class="article-articles__text">Небольшое описание сатьи</div>
+                            </div>
+                        </article>
+                        <article data-filter-item="some" class="articles__article article-articles">
+                            <a href="" class="article-articles__image">
+                                <picture>
+                                    <source srcset='@img/articles/01.webp' type='image/webp'>
+                                    <img src='@img/articles/01.jpg' alt='article'>
+                                </picture>
+                            </a>
+                            <div class="article-articles__info">
+                                <div class="article-articles__date">12.03.2023</div>
+                                <h4 class="article-articles__title">
+                                    <a href="">Название статьи</a>
+                                </h4>
+                                <div class="article-articles__text">Небольшое описание сатьи</div>
+                            </div>
+                        </article>
+                        <article data-filter-item="some" class="articles__article article-articles">
+                            <a href="" class="article-articles__image">
+                                <picture>
+                                    <source srcset='@img/articles/07.webp' type='image/webp'>
+                                    <img src='@img/articles/07.png' alt='article'>
+                                </picture>
+                            </a>
+                            <div class="article-articles__info">
+                                <div class="article-articles__date">12.03.2023</div>
+                                <h4 class="article-articles__title">
+                                    <a href="">Название статьи</a>
+                                </h4>
+                                <div class="article-articles__text">Небольшое описание сатьи</div>
+                            </div>
+                        </article>
+                        <article data-filter-item="some" class="articles__article article-articles">
+                            <a href="" class="article-articles__image">
+                                <picture>
+                                    <source srcset='@img/articles/01.webp' type='image/webp'>
+                                    <img src='@img/articles/01.jpg' alt='article'>
+                                </picture>
+                            </a>
+                            <div class="article-articles__info">
+                                <div class="article-articles__date">12.03.2023</div>
+                                <h4 class="article-articles__title">
+                                    <a href="">Название статьи</a>
+                                </h4>
+                                <div class="article-articles__text">Небольшое описание сатьи</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+<!--             <section class="project-slider" id="projects">
                 <div class='project-slider__container container'>
                     <h2 class="project-slider__title title">Проекты</h2>
                     <div class="project-slider__body">
@@ -233,8 +478,8 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="articles" id="articles">
+            </section> -->
+<!--             <section class="articles" id="articles">
                 <div class='articles__container container'>
                     <h2 class="articles__title title">Популярные статьи</h2>
                     <a href="article.html" class="articles__item">
@@ -303,7 +548,7 @@
                         </div>
                     </a>
                 </div>
-            </section>
+            </section> -->
             <section class="gallery" id="gallery">
                 <div class="gallery__container container">
                     <h3 class="gallery__title title">Галерея</h3>
