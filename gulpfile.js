@@ -39,7 +39,7 @@ function watcher () {
 
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, images, html, scss, js, svgicons)); //!если нужно видео добавь video 
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, images, html, scss, js, svgicons, video)); //!если нужно видео добавь video 
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks, copyDist);

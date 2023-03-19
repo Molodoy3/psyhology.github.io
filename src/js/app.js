@@ -1,7 +1,8 @@
-/* import Swiper, { Navigation, Pagination } from 'swiper'; */
+import Swiper, { Navigation } from 'swiper'; //EffectCoverflow
 import { initSpollers } from './modules/spollers.js';
 import './modules/smoothScroll.js';
 import './modules/lightgallery.min.js';
+
 /* import Isotope from 'isotope-layout'; */
 
 window.addEventListener('load', windowLoad);
@@ -90,6 +91,14 @@ function windowLoad() {
         if (targetElement.closest('.reset-theme')) {
             resetButton.classList.remove('active');
             localStorage.setItem('user-theme', '');
+        }
+
+        //?Остановка видео при передвежении слайда
+        if (targetElement.closest('.slider-video__play')) {
+            const buttonPlay = targetElement.closest('.slider-video__play');
+            buttonPlay.previousElementSibling.controls = true;
+            buttonPlay.previousElementSibling.play();
+            buttonPlay.classList.add('play');
         }
 
         //!Табы
@@ -199,6 +208,46 @@ function windowLoad() {
             titleTel.classList.add('copy');
             setTimeout(() => { titleTel.classList.remove('copy'); }, 3500);
         }
+    }
+
+    //?Слайдер видосов
+    const slider = document.querySelector('.slider-video');
+    if (slider) {
+        const sliderInit = new Swiper(slider, {
+            modules: [Navigation], //EffectCoverflow
+            wrapperClass: 'slider-video__wrapper',
+            slideClass: 'slider-video__slide',
+            navigation: {
+                prevEl: '.slider-video__prev',
+                nextEl: '.slider-video__next',
+            },
+            /* slidesPerView: 1, */
+            /* loop: true, */
+            speed: 800,
+            spaceBetween: 30,
+            observer: true,
+            observeParents: true,
+
+            keyboardSupport: true,
+            observeSlideChildren: true,
+            /*             effect: "coverflow",
+                        coverflowEffect: {
+                            rotate: 0,
+                            stretch: 0,
+                            depth: 0,
+                            modifier: 3,
+                            slideShadows: true,
+                          }, */
+        });
+        sliderInit.activeIndex = 1;
+        sliderInit.update();
+        sliderInit.on('slideChange', function () {
+            document.querySelectorAll('video').forEach(video => {
+                video.pause();
+                video.controls = false;
+                video.nextElementSibling.classList.remove('play');
+            });
+        });
     }
 
     /*     if (document.querySelector('.project-slider__body')) {
