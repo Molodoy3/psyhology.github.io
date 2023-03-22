@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "icons";
+    src: url("../fonts/icons.ttf") format("woff", url("../fonts/icons.woff2") format("woff2"));
+    font-display: swap;
+    font-display: block;
+    font-style: normal;
+    font-weight: normal;
+  }
+  %ic {
+    font-family: "icons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-asx-font-smoothing: grasyscale;
+  }
+  
+  [class^="icon-"],
+  [class*="icon-"] {
+    &::before {
+      @extend %ic;
+      display: block;
+    }
+  }
+
+  .icon-phone:before {
+    content: "\e901";
+  }
+  .icon-arrowSubList:before {
+    content: "\e902";
+  }
+  .icon-vk:before {
+    content: "\e904";
+  }
+  .icon-watsApp:before {
+    content: "\e905";
+  }
+  .icon-inst:before {
+    content: "\e906";
+  }
+  .icon-telegram:before {
+    content: "\e907";
+  }
+  .icon-arrowSlider:before {
+    content: "\e908";
+  }
+  .icon-arrowBredCrumbs:before {
+    content: "\e909";
+  }

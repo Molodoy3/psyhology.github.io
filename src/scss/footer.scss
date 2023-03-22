@@ -1,0 +1,195 @@
+.footer {
+    color: #e3e3e3;
+    &__container {
+    }
+
+    &__social {
+    }
+
+    &__main {
+        background: #142d3b;
+        @include adaptiv-value('padding-top', 55, 35, 1);
+        @include adaptiv-value('padding-bottom', 55, 35, 1);
+        &_body {
+            display: flex;
+            @media (max-width: $md2){
+                flex-wrap: wrap;
+            }
+            justify-content: space-between;
+        }
+    }
+
+    &__about {
+        @media (min-width: $md2){
+            flex: 0 1 300px;
+            @include adaptiv-value("padding-right", 65, 10, 1);
+        }
+        flex: 0 1 100%;
+        @include adaptiv-value('margin-bottom', 35, 20, 1);
+    }
+
+    &__title {
+        font-size: 16px;
+        line-height: calc(20 / 16) * 100%;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 600;
+        @include adaptiv-value('padding-bottom', 10, 5, 1);
+        position: relative;
+        @include adaptiv-value("margin-bottom", 28, 5, 1);
+        &.active{
+            transform: rotate(0deg);
+        }
+        &::after {
+            content: "";
+            height: 1px;
+            width: 70px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: #D98200;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: calc(20 / 12) * 100%;
+    }
+
+    &__menu {
+    }
+
+    &__bottom {
+    }
+}
+.container {
+}
+.social-footer {
+    background: #175c85;
+    &__body {
+        @include adaptiv-value("min-height", 77, 50, 1);
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0;
+        align-items: center;
+        @media (max-width: $md4){
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    &__text {
+        padding-right: 15px;
+        @media (max-width: $md4){
+            flex: 0 1 100%;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    }
+
+    &__list {
+        display: flex;
+        li {
+            @include adaptiv-value("margin-right", 54, 30, 1);
+            font-size: 23px;
+            @media (any-hover: hover) {
+                &:hover{
+                    .social-footer__link{
+                        color: #D98200;
+                    }
+                }
+            }
+        }
+    }
+
+    &__link {
+        color: #fff;
+        transition: color 0.3s ease 0s;
+    }
+}
+.menu-footer {
+    display: flex;
+    flex: 1 1 auto;
+    margin: 0 -10px;
+    justify-content: space-between;
+    @media (max-width: $md3){
+        flex-wrap: wrap;
+    }
+    .footer__title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+        &.active{
+            &::before{
+                transform: rotate(180deg);
+            }
+        }
+        &::before{
+            font-size: 0;
+            transition: all 0.3s ease 0s;
+        }
+        @media (max-width: $md3){
+            &::after{
+                height: 0;
+                padding-bottom: 0;
+                margin-bottom: 5px;
+            }
+
+            &::before{
+                font-size: 12px;
+                margin-left: 5px;
+            }
+        }
+    }
+    &__column {
+        flex: 0 1 33.3333%;
+        padding: 0 10px;
+        @media (max-width: $md3){
+            flex: 0 1 100%;
+            &:not(:last-child) {
+                margin: 0px 0px 25px 0px;
+            }
+        }
+    }
+
+    &__list {
+        li {
+            &:not(:last-child) {
+                margin: 0px 0px 15px 0px;
+            }
+        }
+    }
+
+    &__link {
+        color: inherit;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: calc(20 / 16) * 100%;
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover{
+                color: #e69721;
+            }
+        }
+    }
+}
+.bottom-footer {
+    background: #102430;
+    &__body{
+       height: 47px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__text {
+        color: #818181;
+        a{
+            color: #fff;
+            @media (min-width: 767.98px){
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
