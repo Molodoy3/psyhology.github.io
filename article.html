@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/Icon/Logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap&_v=20230322211504" rel="stylesheet">
+    <link rel='shortcut icon' href='img/logo-picture.svg'>
+    <link rel="stylesheet" href="css/style.min.css?_v=20230322211504">
+    <script defer src="https://vk.com/js/api/openapi.js?169&_v=20230322211504" type="text/javascript"></script>
+    <title>Арт терапия</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__body container">
+                <div class="header__row">
+                    <a href="index.html" class="header__logo logo">
+                        <img src='img/logo-picture.svg' alt='logo picture'>
+                        <img src='img/logo-name.svg' alt='logo name'>
+                    </a>
+                    <div class='header__menu menu'>
+                        <div class='menu__icon'>
+                            <span></span>
+                        </div>
+                        <nav class='menu__body'>
+                            <ul data-spollers='768,max' class='menu__list'>
+                                <li class="menu__item"><a data-goto='.about' href='index.html'
+                                        class='menu__link'>Главная</a></li>
+                                <li class="menu__item">
+                                    <a data-goto='.project-slider' href='/#projects' class='menu__link'>Проекты</a>
+                                    <div data-spoller tabindex='-1' class="menu__arrow icon-arrowSubList"></div>
+                                    <ul class="menu__sub-list">
+                                        <li><a href="" class="menu__sub-link">Проект 1</a></li>
+                                        <li><a href="" class="menu__sub-link">Проект 2</a></li>
+                                        <li><a href="" class="menu__sub-link">Проект 3</a></li>
+                                        <li><a href="" class="menu__sub-link">Проект 4</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu__item active">
+                                    <a data-goto='.articles' href='/#articles' class='menu__link'>Статьи</a>
+                                    <div data-spoller tabindex='-1' class="menu__arrow icon-arrowSubList"></div>
+                                    <ul class="menu__sub-list">
+                                        <li><a href="article.html" class="menu__sub-link">Арт терапия</a></li>
+                                        <li><a href="" class="menu__sub-link">Статья 2</a></li>
+                                        <li><a href="" class="menu__sub-link">Статья 3</a></li>
+                                        <li><a href="" class="menu__sub-link">Статья 4</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu__item"><a data-goto='.gallery' href='/#gallery' class='menu__link'>Галерея</a></li>
+                                <li class="menu__item"><a href='/#gallery-video' class='menu__link'>Видео</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header__icons">
+                        <button type="button" class="header__theme theme">
+                            <div class="header__icon-theme header__icon-theme_light">
+                                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M21.529 15.93C21.369 15.66 20.919 15.24 19.799 15.44C19.179 15.55 18.549 15.6 17.919 15.57C16.7954 15.519 15.6934 15.2432 14.6783 14.7588C13.6631 14.2745 12.7555 13.5914 12.009 12.75C10.709 11.3 9.909 9.40999 9.899 7.36999C9.899 6.22999 10.119 5.12999 10.569 4.08999C11.009 3.07999 10.699 2.54999 10.479 2.32999C10.249 2.09999 9.709 1.77999 8.649 2.21999C4.559 3.93999 2.029 8.03999 2.329 12.43C2.629 16.56 5.529 20.09 9.369 21.42C10.2999 21.7448 11.2738 21.9301 12.259 21.97C12.419 21.98 12.579 21.99 12.739 21.99C16.089 21.99 19.229 20.41 21.209 17.72C21.879 16.79 21.699 16.2 21.529 15.93Z" />
+                                </svg>
+                            </div>
+                            <div class="header__icon-theme header__icon-theme_dark">
+                                <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 18C11.9193 18 12.8295 17.8189 13.6788 17.4672C14.5281 17.1154 15.2997 16.5998 15.9497 15.9497C16.5998 15.2997 17.1154 14.5281 17.4672 13.6788C17.8189 12.8295 18 11.9193 18 11C18 10.0807 17.8189 9.17049 17.4672 8.32122C17.1154 7.47194 16.5998 6.70026 15.9497 6.05025C15.2997 5.40024 14.5281 4.88463 13.6788 4.53284C12.8295 4.18106 11.9193 4 11 4C9.14348 4 7.36301 4.7375 6.05025 6.05025C4.7375 7.36301 4 9.14348 4 11C4 12.8565 4.7375 14.637 6.05025 15.9497C7.36301 17.2625 9.14348 18 11 18ZM11 21.96C10.45 21.96 10 21.55 10 21V20.92C10 20.37 10.45 19.92 11 19.92C11.55 19.92 12 20.37 12 20.92C12 21.47 11.55 21.96 11 21.96ZM18.14 19.14C17.88 19.14 17.63 19.04 17.43 18.85L17.3 18.72C17.2074 18.6274 17.134 18.5175 17.0839 18.3965C17.0338 18.2756 17.008 18.1459 17.008 18.015C17.008 17.8841 17.0338 17.7544 17.0839 17.6335C17.134 17.5125 17.2074 17.4026 17.3 17.31C17.3926 17.2174 17.5025 17.144 17.6235 17.0939C17.7444 17.0438 17.8741 17.018 18.005 17.018C18.1359 17.018 18.2656 17.0438 18.3865 17.0939C18.5075 17.144 18.6174 17.2174 18.71 17.31L18.84 17.44C18.9789 17.579 19.0736 17.7561 19.1122 17.9489C19.1507 18.1416 19.1313 18.3415 19.0564 18.5232C18.9816 18.705 18.8546 18.8606 18.6916 18.9703C18.5285 19.0801 18.3366 19.1391 18.14 19.14ZM3.86 19.14C3.6 19.14 3.35 19.04 3.15 18.85C3.0573 18.7575 2.98375 18.6476 2.93357 18.5266C2.88339 18.4057 2.85756 18.276 2.85756 18.145C2.85756 18.014 2.88339 17.8843 2.93357 17.7634C2.98375 17.6424 3.0573 17.5325 3.15 17.44L3.28 17.31C3.37258 17.2174 3.48249 17.144 3.60346 17.0939C3.72442 17.0438 3.85407 17.018 3.985 17.018C4.11593 17.018 4.24558 17.0438 4.36654 17.0939C4.48751 17.144 4.59742 17.2174 4.69 17.31C4.78258 17.4026 4.85602 17.5125 4.90613 17.6335C4.95623 17.7544 4.98202 17.8841 4.98202 18.015C4.98202 18.1459 4.95623 18.2756 4.90613 18.3965C4.85602 18.5175 4.78258 18.6274 4.69 18.72L4.56 18.85C4.37 19.04 4.11 19.14 3.86 19.14ZM21 12H20.92C20.37 12 19.92 11.55 19.92 11C19.92 10.45 20.37 10 20.92 10C21.47 10 21.96 10.45 21.96 11C21.96 11.55 21.55 12 21 12ZM1.08 12H1C0.45 12 0 11.55 0 11C0 10.45 0.45 10 1 10C1.55 10 2.04 10.45 2.04 11C2.04 11.55 1.63 12 1.08 12ZM18.01 4.99C17.75 4.99 17.5 4.89 17.3 4.7C17.2073 4.60749 17.1337 4.4976 17.0836 4.37662C17.0334 4.25565 17.0076 4.12597 17.0076 3.995C17.0076 3.86403 17.0334 3.73435 17.0836 3.61338C17.1337 3.4924 17.2073 3.38251 17.3 3.29L17.43 3.16C17.5226 3.06742 17.6325 2.99398 17.7535 2.94387C17.8744 2.89377 18.0041 2.86798 18.135 2.86798C18.2659 2.86798 18.3956 2.89377 18.5165 2.94387C18.6375 2.99398 18.7474 3.06742 18.84 3.16C18.9326 3.25258 19.006 3.36249 19.0561 3.48346C19.1062 3.60442 19.132 3.73407 19.132 3.865C19.132 3.99593 19.1062 4.12558 19.0561 4.24654C19.006 4.36751 18.9326 4.47742 18.84 4.57L18.71 4.7C18.52 4.89 18.27 4.99 18.01 4.99ZM3.99 4.99C3.73 4.99 3.48 4.89 3.28 4.7L3.15 4.56C3.05742 4.46742 2.98398 4.35751 2.93387 4.23654C2.88377 4.11558 2.85798 3.98593 2.85798 3.855C2.85798 3.72407 2.88377 3.59442 2.93387 3.47346C2.98398 3.35249 3.05742 3.24258 3.15 3.15C3.24258 3.05742 3.35249 2.98398 3.47346 2.93387C3.59442 2.88377 3.72407 2.85798 3.855 2.85798C3.98593 2.85798 4.11558 2.88377 4.23654 2.93387C4.35751 2.98398 4.46742 3.05742 4.56 3.15L4.69 3.28C5.08 3.67 5.08 4.3 4.69 4.69C4.5 4.89 4.24 4.99 3.99 4.99ZM11 2.04C10.45 2.04 10 1.63 10 1.08V1C10 0.45 10.45 0 11 0C11.55 0 12 0.45 12 1C12 1.55 11.55 2.04 11 2.04Z"
+                                        />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="header__phone phone">
+                            <div class="phone__link icon-phone">Связаться</div>
+                            <div class="phone__popup popup-phone">
+                                <div class="popup-phone__body">
+                                    <div title="Скопировать" class="popup-phone__title">
+                                        <span>+7-(966)-170-26-64</span>
+                                        <div class="popup-phone__copy">Номер скопирован</div>
+                                    </div>
+                                    <div class="popup-phone__text">Вы можете позвонить Ксении, для того чтобы записаться на
+                                        прием (или напишите на почту <a href="">почта</a>)</div>
+                                    <a href="tel:79661702664" class="popup-phone__btn">Позвонить</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+<!--         <header class="header">
+            <div class="header__body container">
+                <div class="header__row">
+                    <a href="index.html" class="header__logo logo">
+                        psych<span>o</span>l<span>o</span>gy
+                    </a>
+                    <div class='header__menu menu'>
+                        <div class='menu__icon'>
+                            <span></span>
+                        </div>
+                        <nav class='menu__body'>
+                            <ul data-spollers='768,max' class='menu__list'>
+                                <li class="menu__item"><a data-goto='.about' href='index.html'
+                                        class='menu__link'>Главная</a></li>
+                                <li class="menu__item">
+                                    <a data-goto='.project-slider' href='/#projects' class='menu__link'>Проекты</a>
+                                    <div data-spoller tabindex='-1' class="menu__arrow icon-arrowSubList"></div>
+                                    <ul class="menu__sub-list">
+                                        <li><a href="" class="menu__sub-link">Проект 1</a></li>
+                                        <li><a href="" class="menu__sub-link">Проект 2</a></li>
+                                        <li><a href="" class="menu__sub-link">Проект 3</a></li>
+                                        <li><a href="" class="menu__sub-link">Проект 4</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu__item active">
+                                    <a data-goto='.articles' href='/#articles' class='menu__link'>Статьи</a>
+                                    <div data-spoller tabindex='-1' class="menu__arrow icon-arrowSubList"></div>
+                                    <ul class="menu__sub-list">
+                                        <li><a href="article.html" class="menu__sub-link">Статья 1</a></li>
+                                        <li><a href="" class="menu__sub-link">Статья 2</a></li>
+                                        <li><a href="" class="menu__sub-link">Статья 3</a></li>
+                                        <li><a href="" class="menu__sub-link">Статья 4</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu__item"><a data-goto='.gallery' href='/#gallery'
+                                        class='menu__link'>Галерея</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header__phone phone">
+                        <div class="phone__link icon-phone">Связаться</div>
+                        <div class="phone__popup popup-phone">
+                            <div class="popup-phone__body">
+                                <div class="popup-phone__title">8-(966)-731-0774</div>
+                                <div class="popup-phone__text">Вы можете позвонить Ксении, для того чтобы задать
+                                    интересующие вас вопросы</div>
+                                <a href="tel: 89667310774" class="popup-phone__btn">Позвонить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header> -->
+        <div class="main">
+            <div class="main__article article-main">
+                <div class='article-main__container container'>
+                    <div class="article-main__body">
+                        <div class="bred-crumbs">
+                            <ul class="bred-crumbs__list">
+                                <li class="icon-arrowBredCrumbs"><a href="#articles"
+                                        class="bred-crumbs__link">Статьи</a></li>
+                                <li>Арт терапия</li>
+                            </ul>
+                        </div>
+                        <section class="article">
+                            <div class="article__chapter">
+                                <h1 class="article__title title">Арт терапия - Что это такое и как она работает:
+                                    подробно!
+                                </h1>
+                                <div class="article__labels">
+                                    <div class="article__label"><svg width="17" height="16" viewBox="0 0 17 16"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_162_2)">
+                                                <path
+                                                    d="M15.2339 8C15.2339 11.68 12.1391 14.6667 8.32588 14.6667C4.51264 14.6667 1.41785 11.68 1.41785 8C1.41785 4.32 4.51264 1.33333 8.32588 1.33333C12.1391 1.33333 15.2339 4.32 15.2339 8Z"
+                                                    stroke="#797979" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M10.8888 10.12L8.7473 8.88667C8.37427 8.67333 8.07031 8.16 8.07031 7.74V5.00667"
+                                                    stroke="#797979" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_162_2">
+                                                    <rect width="16.5793" height="16" fill="white"
+                                                        transform="translate(0.0362549)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        10 ноября, 2022 год</div>
+                                    <div class="article__label"> <svg width="18" height="16" viewBox="0 0 18 16"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.00992 7.99999C9.92599 7.99999 10.8045 7.64881 11.4523 7.02368C12.1 6.39856 12.4639 5.55072 12.4639 4.66666C12.4639 3.78261 12.1 2.93476 11.4523 2.30964C10.8045 1.68452 9.92599 1.33333 9.00992 1.33333C8.09386 1.33333 7.21532 1.68452 6.56757 2.30964C5.91981 2.93476 5.55591 3.78261 5.55591 4.66666C5.55591 5.55072 5.91981 6.39856 6.56757 7.02368C7.21532 7.64881 8.09386 7.99999 9.00992 7.99999V7.99999Z"
+                                                stroke="#797979" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M13.9907 10.4933L11.5452 12.8533C11.4485 12.9467 11.3587 13.12 11.338 13.2467L11.2067 14.1467C11.1584 14.4733 11.3933 14.7 11.7318 14.6533L12.6643 14.5267C12.7956 14.5067 12.9821 14.42 13.0719 14.3267L15.5174 11.9667C15.9387 11.56 16.1391 11.0867 15.5174 10.4867C14.9025 9.89333 14.4121 10.0867 13.9907 10.4933V10.4933Z"
+                                                stroke="#797979" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M13.6383 10.8333C13.8455 11.5533 14.4258 12.1133 15.1719 12.3133"
+                                                stroke="#797979" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M3.07593 14.6667C3.07593 12.0867 5.73552 10 9.00993 10C9.72836 10 10.4192 10.1 11.0616 10.2867"
+                                                stroke="#797979" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>Автор: Ксения Полушина</div>
+                                </div>
+                                <p>Артпсихология - аправление в психотерапии и психологической коррекции, основанное на
+                                    применении искусства и творчества. Основной целью такой терапии является
+                                    <span>гармонизация</span>
+                                    личности через самовыражение, и познание себя с помощью творчества и искусства.
+                                </p>
+                                <p>Арт-терапия может использоваться психологами и как основное направление в работе, и
+                                    как
+                                    вспомогательное.
+                                </p>
+                                <div class="article__image">
+                                    <picture>
+                                        <source srcset='img/articleArtpsisology/01.webp' type='image/webp'>
+                                        <img src='img/articleArtpsisology/01.jpg' alt='content'>
+                                    </picture>
+                                </div>
+                                <div data-spollers class='article__spoller spoller-article'>
+                                    <div class='spoller-article__item'>
+                                        <button data-spoller tabindex='-1' type='button'
+                                            class='spoller-article__title active icon-arrowSlider'>Содержание</button>
+                                        <div class='spoller-article__content'>
+                                            <ol class="spoller-article__llist">
+                                                <li class="spoller-article__item"><a data-goto='.artterapia' href="">Что
+                                                        такое арт-террапия и что она дает?</a>
+                                                </li>
+                                                <li class="spoller-article__item"><a href="">История возникновения</a>
+                                                </li>
+                                                <li class="spoller-article__item"><a href="">Задачи арт терапии</a></li>
+                                                <li class="spoller-article__item">
+                                                    <a href="">Техники</a>
+                                                    <ol class="spoller-article__sub-list">
+                                                        <li class="spoller-article__sub-item"><a href="">Управжнение
+                                                                “Аватар”</a></li>
+                                                        <li class="spoller-article__sub-item"><a href="">Управжнение
+                                                                “Образ цели”</a></li>
+                                                        <li class="spoller-article__sub-item"><a href="">Управжнение
+                                                                “Жизнь как дорога”</a>
+                                                        </li>
+                                                    </ol>
+                                                </li>
+                                                <li class="spoller-article__item"><a href="">Приемы арт терапии</a></li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article__chapter artterapia">
+                                <h2 class="article__sub-title">Что дает арт терапия?</h2>
+                                <p>
+                                    Идея соединения между собой нескольких компьютеров появилась еще при их создании, но
+                                    сделали это лишь в <span>1969</span> году. Соединили между собой два ПК из разных
+                                    университетов — ПК Sigma 7 из Калифорнии с ПК SDS 940 в Стэнфорде.
+                                </p>
+                                <p>
+                                    Используя сильные стороны и удачные решения ARPANET в <span>1984</span> году
+                                    национальным научным фондом США была создана уже более открытая и современная сеть —
+                                    NSFNet. Использовали ее для установления связи между вычислительными центрами и
+                                    институтами посредством компьютеров. Подключение к ней было довольно свободным,
+                                    поэтому
+                                    уже к <span>1992</span> году к ней было подключено уже более 7 500 тысяч других
+                                    мелких
+                                    сеток. Некоторые были и из разных стран.
+                                </p>
+                                <div class="article__image">
+                                    <picture>
+                                        <source srcset='img/articleArtpsisology/02.webp' type='image/webp'>
+                                        <img src='img/articleArtpsisology/02.jpg' alt='content'>
+                                    </picture>
+                                </div>
+                                <div class="article__title-list">
+                                    Какой-то список:
+                                </div>
+                                <ul class="article__list">
+                                    <li>Sed ut perspiciatis unde omnis iste natus</li>
+                                    <li>qui dolorem ipsum quia dolor sit amet qui dolorem ipsum quia dolor sit amet</li>
+                                    <li>avoids a pain that produces no resultant pleasure
+                                    </li>
+                                    <li>aut perferendis doloribus asperiores repellat
+                                    </li>
+                                    <li>Sed ut perspiciatis unde omnis iste natus qui dolorem ipsum quia dolor sit amet
+                                    </li>
+                                    <li> qui dolorem ipsum quia dolor sit amet qui dolorem ipsum quia dolor sit amet qui
+                                        dolorem ipsum quia dolor sit amet qui dolorem ipsum quia dolor sit amet
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                    <aside class="article-main__sidebar sidebar">
+                        <h3 class="sidebar__title">ПОПУЛЯРНЫЕ СТАТЬИ</h3>
+                        <div class="sidebar__articles articles-sidebar">
+                            <a href="" class="articles-sidebar__item">
+                                <div class="articles-sidebar__image">
+                                    <picture>
+                                        <source srcset='img/sidebar/articles/01.webp' type='image/webp'>
+                                        <img src='img/sidebar/articles/01.jpg' alt='article'>
+                                    </picture>
+                                </div>
+                                <div class="articles-sidebar__content">
+                                    <h4 class="articles-sidebar__title">Артпсихология</h4>
+                                    <div class="articles-sidebar__text">
+                                        Sed ut perspiciatis unde omnis iste natus
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="" class="articles-sidebar__item">
+                                <div class="articles-sidebar__image">
+                                    <picture>
+                                        <source srcset='img/sidebar/articles/02.webp' type='image/webp'>
+                                        <img src='img/sidebar/articles/02.jpg' alt='article'>
+                                    </picture>
+                                </div>
+                                <div class="articles-sidebar__content">
+                                    <h4 class="articles-sidebar__title">Артпсихология</h4>
+                                    <div class="articles-sidebar__text">
+                                        Sed ut perspiciatis unde omnis iste natus
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="" class="articles-sidebar__item">
+                                <div class="articles-sidebar__image">
+                                    <picture>
+                                        <source srcset='img/sidebar/articles/03.webp' type='image/webp'>
+                                        <img src='img/sidebar/articles/03.jpg' alt='article'>
+                                    </picture>
+                                </div>
+                                <div class="articles-sidebar__content">
+                                    <h4 class="articles-sidebar__title">Артпсихология</h4>
+                                    <div class="articles-sidebar__text">
+                                        Sed ut perspiciatis unde omnis iste natus
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="" class="articles-sidebar__item">
+                                <div class="articles-sidebar__image">
+                                    <picture>
+                                        <source srcset='img/sidebar/articles/04.webp' type='image/webp'>
+                                        <img src='img/sidebar/articles/04.jpg' alt='article'>
+                                    </picture>
+                                </div>
+                                <div class="articles-sidebar__content">
+                                    <h4 class="articles-sidebar__title">Артпсихология</h4>
+                                    <div class="articles-sidebar__text">
+                                        Sed ut perspiciatis unde omnis iste natus
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <h3 class="sidebar__title">Наши авторы</h3>
+                        <div class="sidebar__authors authors-sidebar">
+                            <a href="" class="authors-sidebar__item">
+                                <div class="authors-sidebar__image">
+                                    <picture>
+                                        <source srcset='img/sidebar/athors/01.webp' type='image/webp'>
+                                        <img src='img/sidebar/athors/01.jpg' alt='author'>
+                                    </picture>
+                                </div>
+                                <div class="authors-sidebar__name">К. Полушина</div>
+                            </a>
+                            <a href="" class="authors-sidebar__item">
+                                <div class="authors-sidebar__image">
+                                    <picture>
+                                        <source srcset='img/sidebar/athors/02.webp' type='image/webp'>
+                                        <img src='img/sidebar/athors/02.jpg' alt='author'>
+                                    </picture>
+                                </div>
+                                <div class="authors-sidebar__name">А.К Сапунов</div>
+                            </a>
+                            <a href="" class="authors-sidebar__item">
+                                <div class="authors-sidebar__image">
+                                    <picture>
+                                        <source srcset='img/sidebar/athors/01.webp' type='image/webp'>
+                                        <img src='img/sidebar/athors/01.jpg' alt='author'>
+                                    </picture>
+                                </div>
+                                <div class="authors-sidebar__name">К. Полушина</div>
+                            </a>
+                            <a href="" class="authors-sidebar__item">
+                                <div class="authors-sidebar__image">
+                                    <picture>
+                                        <source srcset='img/sidebar/athors/02.webp' type='image/webp'>
+                                        <img src='img/sidebar/athors/02.jpg' alt='author'>
+                                    </picture>
+                                </div>
+                                <div class="authors-sidebar__name">А.К Сапунов</div>
+                            </a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+            <div class="main__comments">
+                <div class='main__container container'>
+                    <script type="text/javascript">
+                        VK.init({
+                          apiId: '51588161',
+                          onlyWidgets: true
+                        });
+                  </script>
+                  <div id="vk_comments"></div>
+                  <script type="text/javascript">
+                    VK.Widgets.Comments('vk_comments');
+                  </script>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+    <div class="footer__social social-footer">
+        <div class='container'>
+            <div class="social-footer__body">
+                <div class="social-footer__text">Мы есть в социальных сетях</div>
+                <ul class="social-footer__list">
+                    <li><a href="" class="social-footer__link icon-watsApp"></a></li>
+                    <li><a href="" class="social-footer__link icon-vk"></a></li>
+                    <li><a href="" class="social-footer__link icon-telegram"></a></li>
+                    <li><a href="" class="social-footer__link icon-inst"></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer__main">
+        <div class='container'>
+            <div class="footer__main_body">
+                <div class="footer__about">
+                    <div class="footer__title">О сайте</div>
+                    <div class="footer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat fugiat esse
+                        laboriosam excepturi, natus ipsam, quibusdam mollitia commodi </div>
+                </div>
+                <nav class="footer__menu menu-footer" data-spollers="767.98,max">
+                    <div class="menu-footer__column">
+                        <div class="footer__title icon-arrowSubList" data-spoller>проекты</div>
+                        <ul class="menu-footer__list">
+                            <li><a href="" class="menu-footer__link">Проект какой-то</a></li>
+                            <li><a href="" class="menu-footer__link">Другой элемент мент</a></li>
+                            <li><a href="" class="menu-footer__link">Проект какой-то</a></li>
+                            <li><a href="" class="menu-footer__link">Другой элемент мент</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-footer__column">
+                        <div class="footer__title icon-arrowSubList" data-spoller>Статьи</div>
+                        <ul class="menu-footer__list">
+                            <li><a href="" class="menu-footer__link">Проект какой-то такой  то</a></li>
+                            <li><a href="" class="menu-footer__link">Еще какой-то</a></li>
+                            <li><a href="" class="menu-footer__link">Проект какой-то</a></li>
+                            <li><a href="" class="menu-footer__link">Элемент</a></li>
+                            <li><a href="" class="menu-footer__link">Элемент</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-footer__column">
+                        <div class="footer__title icon-arrowSubList" data-spoller>Контакты</div>
+                        <ul class="menu-footer__list">
+                            <li><a href="" class="menu-footer__link">Тут телефон 1</a></li>
+                            <li><a href="" class="menu-footer__link">Проект какой-то</a></li>
+                            <li><a href="" class="menu-footer__link">Проект какой-то</a></li>
+                            <li><a href="" class="menu-footer__link">Тут почта</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom bottom-footer">
+        <div class='container'>
+            <div class="bottom-footer__body">
+                <div class="bottom-footer__text"><span>&reg; Copy Rights </span><a href="index.html">Psysology.web</a></div>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+    <!--
+    npm install webp-converter@2.2.3 --save-dev
+    -->
+    <script src="js/app.min.js?_v=20230322211504"></script>
+</body>
+
+</html>
