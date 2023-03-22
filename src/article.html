@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel='shortcut icon' href='@img/logo-picture.svg'>
     <link rel="stylesheet" href="css/style.min.css">
-    <title>Артпсихология</title>
+    <script defer src="https://vk.com/js/api/openapi.js?169" type="text/javascript"></script>
+    <title>Арт терапия</title>
 </head>
 
 <body>
@@ -45,13 +45,14 @@
                                     <a data-goto='.articles' href='/#articles' class='menu__link'>Статьи</a>
                                     <div data-spoller tabindex='-1' class="menu__arrow icon-arrowSubList"></div>
                                     <ul class="menu__sub-list">
-                                        <li><a href="article.html" class="menu__sub-link">Статья 1</a></li>
+                                        <li><a href="article.html" class="menu__sub-link">Арт терапия</a></li>
                                         <li><a href="" class="menu__sub-link">Статья 2</a></li>
                                         <li><a href="" class="menu__sub-link">Статья 3</a></li>
                                         <li><a href="" class="menu__sub-link">Статья 4</a></li>
                                     </ul>
                                 </li>
-                                <li class="menu__item"><a data-goto='.gallery' href='/#gallery' class='menu__link'>Галерея</a>
+                                <li class="menu__item"><a data-goto='.gallery' href='/#gallery' class='menu__link'>Галерея</a></li>
+                                <li class="menu__item"><a href='/#gallery-video' class='menu__link'>Видео</a>
                                 </li>
                             </ul>
                         </nav>
@@ -151,12 +152,12 @@
                             <ul class="bred-crumbs__list">
                                 <li class="icon-arrowBredCrumbs"><a href="#articles"
                                         class="bred-crumbs__link">Статьи</a></li>
-                                <li>Артпсихология</li>
+                                <li>Арт терапия</li>
                             </ul>
                         </div>
                         <section class="article">
                             <div class="article__chapter">
-                                <h1 class="article__title title">Артпсихология - Что это такое и как она работает:
+                                <h1 class="article__title title">Арт терапия - Что это такое и как она работает:
                                     подробно!
                                 </h1>
                                 <div class="article__labels">
@@ -386,6 +387,20 @@
                             </a>
                         </div>
                     </aside>
+                </div>
+            </div>
+            <div class="main__comments">
+                <div class='main__container container'>
+                    <script type="text/javascript">
+                        VK.init({
+                          apiId: '51588161',
+                          onlyWidgets: true
+                        });
+                  </script>
+                  <div id="vk_comments"></div>
+                  <script type="text/javascript">
+                    VK.Widgets.Comments('vk_comments');
+                  </script>
                 </div>
             </div>
         </div>

@@ -17,7 +17,7 @@
 
     &__logo {
         padding-right: 10px;
-        @media (max-width: $md3) {
+        @media (max-width: $md2) {
             order: 2;
         }
     }
@@ -31,7 +31,7 @@
         display: flex;
         align-items: center;
         column-gap: 7px;
-        @media (max-width: $md3) {
+        @media (max-width: $md2) {
             order: 3;
         }
     }
@@ -81,11 +81,11 @@
 
 }
 .menu {
-    @media (max-width: $md3) {
+    @media (max-width: $md2) {
         order: 1;
     }
     &__icon {
-        @media (min-width: $md3) {
+        @media (min-width: $md2) {
             display: none;
         }
         display: block;
@@ -131,15 +131,14 @@
         }
     }
     &__body {
-        @media (max-width: $md3) {
+        @media (max-width: $md2) {
             position: fixed;
             height: 100%;
             width: 100%;
             top: 0;
            /*  background: #2d546bc9; */
             background-color: #175c85;
-            padding: 40px;
-            padding-top: 100px;
+            padding: 100px 10px 30px 10px;
             overflow: auto;
             left: -100%;
             opacity: 0;
@@ -168,7 +167,7 @@
 
     &__list {
         display: flex;
-        @media (max-width: $md3) {
+        @media (max-width: $md2) {
             flex-wrap: wrap;
         }
     }
@@ -177,7 +176,7 @@
         margin-right: 35px;
         color: #fff;
         position: relative;
-        @media (min-width: $md3) {
+        @media (min-width: $md2) {
             height: 70px;
         }
         align-items: center;
@@ -203,7 +202,7 @@
                     transform: translateY(0);
                     pointer-events: auto;
                 }
-                @media (min-width: $md3) {
+                @media (min-width: $md2) {
                     .menu__arrow::before {
                         transform: rotate(180deg);
                     }
@@ -221,12 +220,12 @@
             color: #e69721;
             &::after {
                 height: 3px;
-                @media (max-width: $md3) {
+                @media (max-width: $md2) {
                     height: 0;
                 }
             }
         }
-        @media (max-width: $md3) {
+        @media (max-width: $md2) {
             flex: 0 1 100%;
             justify-content: space-between;
             display: flex;
@@ -245,7 +244,7 @@
         @media (max-width: $md2) {
             font-size: 14px;
         }
-        @media (max-width: $md3) {
+        @media (max-width: $md2) {
             font-size: 35px;
         }
     }
@@ -253,13 +252,13 @@
         margin-left: 5px;
         font-size: 12px;
         transition: all 0.5s ease 0s;
-        @media (max-width: $md3) {
+        @media (max-width: $md2) {
             font-size: 20px;
             margin-left: 15px;
         }
     }
     &__sub-list {
-        @media (min-width: $md3) {
+        @media (min-width: $md2) {
             left: 0;
             top: 100%;
             min-width: 150px;
@@ -272,7 +271,7 @@
         transition: all 0.3s ease 0s;
         background: #102430;
         padding: 10px 0;
-        @media (max-width: $md3) {
+        @media (max-width: $md2) {
             position: relative;
             flex: 0 1 100%;
             margin-top: 10px;
@@ -284,7 +283,7 @@
         width: 100%;
         font-weight: 400;
         font-size: 14px;
-        @media (max-width: $md3) {
+        @media (max-width: $md2) {
             font-size: 25px;
         }
         line-height: calc(17 / 14) * 100%;
